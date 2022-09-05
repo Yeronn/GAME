@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 {
     public static PlayerController Instance;
     public GameObject playerInstance;
+    public Animator animator;
 
     [SerializeField] Image HealthbarImage;
     [SerializeField] GameObject ui;
@@ -39,7 +40,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Awake()
     {
         Instance = this;
-
         rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             return;
         Look();
         Move();
+        AnimationMove();
         Jump();
         Bomb();
         
@@ -94,6 +95,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
         moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
+    }
+
+    void AnimationMove()
+    {
+       animator.SetFloat("MovX", Input.GetAxisRaw("Horizontal")); 
+       animator.SetFloat("MovZ", Input.GetAxisRaw("Vertical"));
+       animator.SetBool("Salta", Input.GetKeyDown(KeyCode.Space));
+       animator.SetBool("Lanza", Input.GetKeyDown(KeyCode.F));
     }
 
     void Jump()

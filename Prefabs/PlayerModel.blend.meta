@@ -6,6 +6,18 @@ ModelImporter:
   - first:
       74: -623603649343465320
     second: Scene
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: -1245888001772292248
+    second: Caminar
+  - first:
+      74: -1142068356105931426
+    second: Saltar
+  - first:
+      74: 491442513154232413
+    second: Lanzar
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -24,7 +36,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -32,14 +45,130 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Scene
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Caminar
+      takeName: Scene
+      internalID: 0
+      firstFrame: 31
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Saltar
+      takeName: Scene
+      internalID: 0
+      firstFrame: 71
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Lanzar
+      takeName: Scene
+      internalID: 0
+      firstFrame: 91
+      lastFrame: 105
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -88,7 +217,117 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: PlayerModel(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMesh
+      parentName: PlayerModel(Clone)
+      position: {x: -0, y: 0.4629681, z: -0.000000091588824}
+      rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerArmature
+      parentName: PlayerModel(Clone)
+      position: {x: -0, y: 1.5106221, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.79123807, y: 0.79123807, z: 0.79123807}
+    - name: Cadera
+      parentName: PlayerArmature
+      position: {x: -0.037564505, y: 0.0038073144, z: -0.00048155707}
+      rotation: {x: 0.82412624, y: -0, z: -0, w: -0.56640613}
+      scale: {x: 1, y: 0.9999995, z: 0.9999995}
+    - name: Pecho
+      parentName: Cadera
+      position: {x: -0, y: 1, z: 0}
+      rotation: {x: -0, y: -0.000000059604645, z: -0.7040147, w: 0.7101854}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Cuello
+      parentName: Pecho
+      position: {x: -0, y: 1.1193304, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Cabeza
+      parentName: Cuello
+      position: {x: -0, y: 0.30523968, z: 0}
+      rotation: {x: -0, y: -0.00000011920928, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Cabeza_end
+      parentName: Cabeza
+      position: {x: -0, y: 1.4856353, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L.Brazo
+      parentName: PlayerArmature
+      position: {x: -0.9091036, y: 0.03693319, z: 1.838257}
+      rotation: {x: 0.70182705, y: -0.2451777, z: -0.08277918, w: 0.6636824}
+      scale: {x: 0.99999994, y: 1, z: 1.0000004}
+    - name: L.Antebrazo
+      parentName: L.Brazo
+      position: {x: -0.00000010058284, y: 0.94751364, z: -0.000000014901161}
+      rotation: {x: -0.02079399, y: 0.10639994, z: -0.012878001, w: -0.9940226}
+      scale: {x: 1.0000004, y: 0.9999998, z: 1.0000002}
+    - name: L.Antebrazo_end
+      parentName: L.Antebrazo
+      position: {x: -0, y: 1.1421806, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L.Pierna
+      parentName: PlayerArmature
+      position: {x: -0.58742326, y: -0.026391229, z: -0.061991926}
+      rotation: {x: -0.49823013, y: 0.52765065, z: -0.50273937, w: 0.46968576}
+      scale: {x: 0.99999976, y: 1, z: 0.9999998}
+    - name: L.Pie
+      parentName: L.Pierna
+      position: {x: 0.000000004656613, y: 0.8480538, z: -0.000000015483238}
+      rotation: {x: 0.029774874, y: -0.009221554, z: -0.0118213, w: 0.99944425}
+      scale: {x: 1.0000005, y: 0.99999994, z: 1.0000002}
+    - name: L.Pie_end
+      parentName: L.Pie
+      position: {x: -0, y: 0.86532843, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R.Brazo
+      parentName: PlayerArmature
+      position: {x: 0.8339746, y: 0.03693319, z: 1.838257}
+      rotation: {x: 0.70182705, y: 0.24517784, z: 0.08277907, w: 0.66368234}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: R.Antebrazo
+      parentName: R.Brazo
+      position: {x: 0.00000005029142, y: 0.94751376, z: -0.000000029802322}
+      rotation: {x: 0.02079399, y: 0.10639994, z: -0.012878001, w: 0.9940226}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: R.Antebrazo_end
+      parentName: R.Antebrazo
+      position: {x: -0, y: 1.1421806, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R.Pierna
+      parentName: PlayerArmature
+      position: {x: 0.51229423, y: -0.026391229, z: -0.061991926}
+      rotation: {x: -0.49823013, y: -0.52765065, z: 0.50273937, w: 0.46968576}
+      scale: {x: 0.99999976, y: 1, z: 0.9999998}
+    - name: R.Pie
+      parentName: R.Pierna
+      position: {x: 0.0000000027939677, y: 0.8480538, z: 0.000000044121407}
+      rotation: {x: 0.029774874, y: 0.009221554, z: 0.0118213, w: 0.99944425}
+      scale: {x: 1.0000006, y: 0.99999994, z: 1.0000004}
+    - name: R.Pie_end
+      parentName: R.Pie
+      position: {x: -0, y: 0.86532843, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Antena
+      parentName: PlayerArmature
+      position: {x: -0.024753226, y: 0.46590912, z: 3.783847}
+      rotation: {x: 0.17246795, y: -0.11951699, z: -0.023617819, w: 0.97745216}
+      scale: {x: 0.9999998, y: 1.0000005, z: 1.0000001}
+    - name: Antena_end
+      parentName: Antena
+      position: {x: -0, y: 0.63023806, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -99,13 +338,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
