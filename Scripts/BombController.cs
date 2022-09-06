@@ -11,7 +11,7 @@ public class BombController : MonoBehaviourPunCallbacks
     PhotonView PV;
 
     public GameObject damage;
-    public float cubeSize;
+    public float cubeSize, cubeDestroyTime;
     public int cubesRow;
     public float explosionForce;
     
@@ -65,7 +65,7 @@ public class BombController : MonoBehaviourPunCallbacks
                     Vector3 spawn = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubesPivot;
                     //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Damage"), spawn, Quaternion.identity);
                     GameObject  instance = Instantiate(damage, spawn, Quaternion.identity);
-                    Destroy(instance, 1.5f);
+                    Destroy(instance, cubeDestroyTime);
                 }
             }
         }

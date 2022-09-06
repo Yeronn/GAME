@@ -1084,14 +1084,14 @@ MonoBehaviour:
   ui: {fileID: 1133592458}
   cameraHolder: {fileID: 1695882395}
   mouseSensitivity: 3
-  sprintSpeed: 6
+  sprintSpeed: 5
   walkSpeed: 3
   jumpForce: 150
   smoothTime: 0.15
   bombPrefab: {fileID: 5165483564041928898, guid: 1cb0ac9ffeb6265488545b6edb005b7e, type: 3}
   bombSpawn: {fileID: 1390677980}
-  cooldownTime: 1.5
-  damageReceived: 10
+  cooldownTime: 1
+  damageReceived: 20
   Health: 100
 --- !u!114 &2004580563541558898
 MonoBehaviour:
