@@ -47,138 +47,28 @@ public class RoomManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
             return;
 
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, -1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, -3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, -5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(6, -1, -6), Quaternion.identity);
+        int contz = 1;
+        for (int z = 10; z >= -10;  z -= 2)
+        {
+            int contx = 0;
+            for (int x = -12; x <= 12; x += 2)
+            {
+                contx += 1;
+                if (contx == 2 && contz % 2 == 0)
+                {
+                    contx = 0;
+                    continue;
+                }
 
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(5, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(5, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(5, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(5, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(5, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(5, -1, -6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, -1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, -3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, -5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, -6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(4, -1, 6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(3, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(3, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(3, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(3, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(3, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(3, -1, 6), Quaternion.identity);
-
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, -1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, -3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(2, -1, -4), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(1, -1, 6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(1, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(1, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(1, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(1, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(1, -1, -4), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, -1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, -3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, -5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(0, -1, -6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, 6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-1, -1, -6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, -1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, -3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, -5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-2, -1, -6), Quaternion.identity);
-        
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-3, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-3, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-3, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-3, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-3, -1, -6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, -5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-4, -1, -6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-5, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-5, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-5, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-5, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-5, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-5, -1, -6), Quaternion.identity);
-
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 6), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, 0), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, -1), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, -2), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, -3), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, -4), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, -5), Quaternion.identity);
-        PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(-6, -1, -6), Quaternion.identity);
-
-
+                if ((x == -12 && z == 10) || (x == -10 && z == 10) || (x == -12 && z == 8) || (x == 10 && z == 6) ||
+                    (x == 12 && z == 6) || (x == 12 && z == 4) || (x == 2 && z == -6) || (x == 4 && z == -6) ||
+                    (x == 4 && z == -8) || (x == -12 && z == -8) || (x == -12 && z == -10) || (x == -10 && z == -10))
+                {
+                    continue;
+                }
+                PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "BoxController"), new Vector3(x, -1, z), Quaternion.identity);
+            }
+            contz++;
+        }
     }
 }

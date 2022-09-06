@@ -28,6 +28,8 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("Instantiated Player Controller");
         //Instantiate our player controller
+        //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerModel"), Vector3.zero, Quaternion.identity);
+
         //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","PlayerController"), new Vector3(2,2,2), Quaternion.identity);
         if (PV.ViewID == 1001)
         {
@@ -57,5 +59,5 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    
+
 }
